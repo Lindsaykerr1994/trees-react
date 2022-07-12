@@ -1,11 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// Import components
 import App from "./App";
 import AllTrees from "./components/trees/all_trees";
 import Tree from "./components/trees/tree";
 import PageNotFound from "./components/general/404";
 import HomePage from "./components/general/home_page";
+// Import styling
+import "./stylesheets/index.scss";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
