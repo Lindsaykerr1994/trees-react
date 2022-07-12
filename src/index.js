@@ -4,8 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
 import AllTrees from "./components/trees/all_trees";
 import Tree from "./components/trees/tree";
-import PageNotFound from "./404";
-import HomePage from "./components/home_page";
+import PageNotFound from "./components/general/404";
+import HomePage from "./components/general/home_page";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

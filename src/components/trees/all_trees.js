@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function AllTrees() {
   let trees = [1, 2];
@@ -12,7 +12,6 @@ export default function AllTrees() {
           </Link>
         </div>
       ))}
-      <Outlet />
     </div>
   );
 }
