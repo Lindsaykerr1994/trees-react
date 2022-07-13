@@ -1,4 +1,11 @@
 #home-page-container {
   overflow: hidden;
   height: 100vh;
+  h1 {
+    line-height: 1;
+  }
+  hr {
+    background-color: $primary-dark;
+    height: 2px;
+  }
 }

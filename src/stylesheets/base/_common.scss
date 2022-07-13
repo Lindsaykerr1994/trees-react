@@ -1,0 +1,88 @@
+hr {
+  border-color: $primary-dark;
+  opacity: 0.75;
+}
+
+$curve: 40px;
+$surface-colour: #fff;
+
+.tcard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 3rem;
+  padding: 0;
+  list-style-type: none;
+  .tcard {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    border-radius: $curve;
+    overflow: hidden;
+    .tcard__image {
+      width: 100%;
+      // This is hardcoded, And needs to be updated.
+      height: 376px;
+      background-color: $primary-main;
+    }
+    .tcard__overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      border-radius: $curve;
+      background-color: $surface-colour;
+      transform: translateY(100%);
+      transition: 0.2s ease-in-out;
+    }
+    &:hover {
+      .tcard__overlay {
+        transform: translateY(0);
+      }
+      .tcard__header {
+        transform: translateY(0);
+      }
+    }
+    .tcard__header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2em;
+      padding: 2em;
+      border-radius: $curve 0 0 0;
+      background-color: $surface-colour;
+      transform: translateY(-100%);
+      transition: 0.2s ease-in-out;
+      .tcard__arc {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        bottom: 100%;
+        right: 0;
+        z-index: 1;
+      }
+      .card__title {
+        font-size: 1em;
+        margin: 0 0 0.3em;
+        color: #6a515e;
+      }
+      .card__status {
+        font-size: 0.8em;
+        color: #d7bdca;
+      }
+    }
+    .tcard__description {
+      padding: 0 2em 2em;
+      margin: 0;
+      color: #d7bdca;
+      font-family: "MockFlowFont";
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  }
+}

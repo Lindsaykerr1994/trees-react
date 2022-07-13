@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
+import HeaderContainer from "./header_container";
+import CardsContainer from "./cards_container";
 
 export default function AllTrees() {
-  let trees = [1, 2];
   return (
-    <div>
-      <h1>All Trees</h1>
-      {trees.map((t, i) => (
-        <div>
-          <Link to={`${t}`} key={i}>
-            {t}
-          </Link>
+    <div className="row">
+      <div className="col-12 px-3">
+        <HeaderContainer message={"All Trees"} />
+        <div className="row cards-container">
+          <div className="col-12">
+            <CardsContainer />
+          </div>
         </div>
-      ))}
+      </div>
     </div>
   );
 }
