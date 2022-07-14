@@ -4,8 +4,15 @@ export default function TreeCard({ tree }) {
       <img className="tcard__image" src={`${tree.img_path}`} alt=""></img>
       <div className="tcard__overlay">
         <div className="tcard__header">
-          <h3 className="tcard__title">{tree.common_name}</h3>
-          <span className="tcard__subtitle">{tree.scientific_name}</span>
+          <div className="tcard__text">
+            <h3 className="tcard__title w-100">{tree.common_name}</h3>
+            <span className="tcard__subtitle">{tree.scientific_name}</span>
+            <p className="tcard__description">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.
+            </p>
+          </div>
         </div>
       </div>
     </li>
