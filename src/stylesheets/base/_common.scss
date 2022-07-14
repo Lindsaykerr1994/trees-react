@@ -8,7 +8,8 @@ $surface-colour: #fff;
 
 .tcard-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   gap: 2rem;
   margin: 4rem 3rem;
   padding: 0;
@@ -16,62 +17,51 @@ $surface-colour: #fff;
   .tcard {
     position: relative;
     display: flex;
+    height: 250px;
     justify-content: center;
     text-decoration: none;
-    height: 100%;
     border-radius: $curve;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.02);
     .tcard__image {
       width: 100%;
-      // This is hardcoded, And needs to be updated.
-      height: 376px;
+      object-fit: cover;
+      height: 100%;
       background-color: $primary-main;
+      border-radius: $curve;
     }
     .tcard__overlay {
+      height: 100%;
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
       z-index: 1;
-      border-radius: $curve;
-      background-color: $surface-colour;
-      transform: translateY(100%);
-      transition: 0.2s ease-in-out;
-    }
-    &:hover {
-      .tcard__overlay {
-        transform: translateY(0);
-      }
+      overflow: hidden;
       .tcard__header {
-        transform: translateY(0);
-      }
-    }
-    .tcard__header {
-      position: relative;
-      display: flex;
-      align-items: center;
-      gap: 2em;
-      padding: 2em;
-      border-radius: $curve 0 0 0;
-      background-color: $surface-colour;
-      transform: translateY(-100%);
-      transition: 0.2s ease-in-out;
-      .tcard__arc {
-        width: 80px;
-        height: 80px;
         position: absolute;
-        bottom: 100%;
-        right: 0;
-        z-index: 1;
+        padding: 0.75em 2em;
+        bottom: 4px;
+        left: 4px;
+        background-color: $primary-white;
+        width: calc(100% - 8px);
+        border-radius: 40px;
+        height: 77.5px;
+        transition: 0.2s ease-in-out;
+        .tcard__title {
+          font-size: 1em;
+          margin: 0 0 0.3em;
+          color: #6a515e;
+        }
+        .tcard__subtitle {
+          font-size: 0.8em;
+          color: #d7bdca;
+        }
       }
-      .card__title {
-        font-size: 1em;
-        margin: 0 0 0.3em;
-        color: #6a515e;
-      }
-      .card__status {
-        font-size: 0.8em;
-        color: #d7bdca;
+      &:hover {
+        .tcard__header {
+          height: calc(100% - 8px);
+        }
       }
     }
     .tcard__description {

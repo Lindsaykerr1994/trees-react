@@ -1,10 +1,9 @@
 import TreeCard from "./tree_card";
-export default function CardsContainer() {
-  let trees = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+export default function CardsContainer({ allTrees }) {
   return (
     <ul className="tcard-container">
-      {trees.map((t, i) => (
-        <TreeCard tree={t} key={i} />
+      {allTrees.map((tree, i) => (
+        <TreeCard tree={tree} key={i} />
       ))}
     </ul>
   );
