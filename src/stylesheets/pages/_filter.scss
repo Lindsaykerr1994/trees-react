@@ -1,0 +1,21 @@
+#alphabet-filter {
+  ul {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    li {
+      width: 30px;
+      padding: 4px;
+      text-align: center;
+      border: 1px solid $primary-main;
+      border-radius: 50%;
+      background: $primary-white;
+      transition: 0.4s;
+      &.active {
+        background-color: $primary-main;
+        color: $primary-white;
+      }
+    }
+  }
+}
