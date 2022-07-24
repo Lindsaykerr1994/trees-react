@@ -28,9 +28,9 @@ export default function AlphabetArray({ clickFunction, alphaFilter }) {
     "Z",
   ];
   return (
-    <ul>
+    <ul className="filter-container mb-0">
       {letters.map((el, i) => (
-        <li key={i} onClick={clickFunction} className={alphaFilter.includes(el) ? "active" : ""}>
+        <li key={i} onClick={clickFunction} className={`filter-btn ${alphaFilter.includes(el) ? " active" : ""}`}>
           {el}
         </li>
       ))}

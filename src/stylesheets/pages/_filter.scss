@@ -1,20 +1,37 @@
 #alphabet-filter {
   ul {
-    padding: 2rem 0;
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    li {
-      width: 30px;
-      padding: 4px;
-      text-align: center;
-      border: 1px solid $primary-main;
-      border-radius: 50%;
-      background: $primary-white;
-      transition: 0.4s;
-      &.active {
-        background-color: $primary-main;
-        color: $primary-white;
+  }
+}
+.filter-container {
+  .filter-btn {
+    min-width: 30px;
+    height: 30px;
+    padding: 4px;
+    text-align: center;
+    border: 1px solid $primary-main;
+    background: $primary-white;
+    border-radius: 15px;
+    transition: 0.4s;
+    &.active {
+      background-color: $primary-main;
+      color: $primary-white;
+    }
+    &:not(.active):hover {
+      background-color: $primary-main-tint;
+    }
+  }
+  &.binary-btn-container {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid $primary-main;
+    .filter-btn {
+      border-radius: 0;
+      border-width: 0;
+      &:first-of-type {
+        border-right-width: 1px;
       }
     }
   }
